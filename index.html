@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!----- Font Poppins from Google Fonts ----->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!----- Font awesome ----->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="./script.js" defer></script>
+
+    <title>Lista de Compras</title>
+</head>
+
+<body id="container-principal">
+
+    <main>
+        <header>
+            <h1>LISTA DE COMPRAS</h1>
+        </header>
+
+        <label for="list">Filtrar:</label>
+        <select name="options" id="list">
+            <option value="all">TODOS</option>
+            <option value="bought">COMPRADOS</option>
+            <option value="outstanding">PENDENTES</option>
+        </select>
+
+        <form>
+            <div id="container-input">
+                <input type="text" class="item-input" placeholder="Nome do produto">
+                <button class="item-button" type="submit">
+                    <i class="fas fa-plus-square"></i>
+                </button>
+            </div>
+        </form>
+
+        <div id="item-container">
+            <ul class="item-list"></ul>
+        </div>
+    </main>
+
+    <aside id="right-side-bar">
+        <button id="mode-selector">Mudar tema</button>
+
+        <div class="container-totals">
+            <h2 class="total-items">Total R$ </h2>
+            <h2 class="qtd-items">Qtde itens:</h2>
+        </div>
+    </aside>
+</body>
+
+</html>
